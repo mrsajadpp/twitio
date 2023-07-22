@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {{#if title}}
+    <title>{{title}} - Twitio</title>
+    {{else}}
+    <title>Twitio - Online Video Downloader</title>
+    {{/if}}
+    <meta name="description" content="{{description}}.">
+    <meta name="keywords" content="{{keywords}}, twitio, youtube, video, downloader, thintry, braitenx, branwith, social,">
+    <link rel='stylesheet' href='/css/style.css' />
+  </head>
+  <body>
+    {{>header}}
+    {{{body}}}
+    {{>footer}}
+    <script src="/js/script.js"></script>
+  </body>
+</html>
