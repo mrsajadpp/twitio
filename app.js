@@ -6,9 +6,10 @@ var logger = require('morgan');
 let handlebars = require('express-handlebars');
 let session = require('express-session');
 let favicon = require("serve-favicon");
+let bodyParser = require('body-parser');
 
 var indexRouter = require('./routes/index');
-//var usersRouter = require('./routes/users');
+var downRouter = require('./routes/download');
 
 var app = express();
 
@@ -17,6 +18,9 @@ app.set('views', path.join(__dirname, 'views'));
 app.engine('hbs', handlebars.engine({ extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/views/layouts/', partialsDir: __dirname + '/views/partials/' }));
 app.set('view engine', 'hbs');
 
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -24,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
-//app.use('/users', usersRouter);
+app.use('/download', downRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

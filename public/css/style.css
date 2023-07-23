@@ -1,8 +1,154 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  padding: 50px;
+  padding: 0px;
+  margin: 0px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #F9FFFD;
 }
 
 a {
   color: #00B7FF;
+}
+
+button {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+.header {
+  width: 100%;
+  height: 55px;
+  background: #060002;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  top: 0px;
+}
+
+.header .right {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .right nav {
+  width: 100%;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+
+.header .right button {
+  width: 80px;
+  height: 100%;
+  border: none;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header .left {
+  width: 300px;
+  height: 55px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  padding-left: 10px;
+}
+
+.header .left img {
+  width: 100px;
+}
+
+.footer {
+  width: 100%;
+  height: 55px;
+  background: #060002;
+  display: flex;
+  align-items: center;
+  position: fixed;
+  bottom: 0px;
+}
+
+.footer .icons {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer button {
+  border: none;
+  background: transparent;
+}
+
+@media screen and (min-width: 424px){
+  .footer {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 424px){
+  .header .right {
+    display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .buttons {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .buttons .button {
+  width: 100%;
+  height: 50px;
+  background: #CD201F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.container .buttons .spt {
+  background: #1DB954;
+}
+
+.container .button a {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+}
+
+.container .button button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
 }
