@@ -93,13 +93,13 @@ input {
   background: transparent;
 }
 
-@media screen and (min-width: 424px){
+@media screen and (min-width: 424px) {
   .footer {
     display: none;
   }
 }
 
-@media screen and (max-width: 424px){
+@media screen and (max-width: 424px) {
   .header .right {
     display: none;
   }
@@ -151,4 +151,39 @@ input {
   align-items: center;
   justify-content: center;
   background: transparent;
+}
+
+.container .download {
+  width: 80%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .download form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container .download form input {
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  border: none;
+  background: #f2f2f2;
+  padding-left: 10px;
+}
+
+.container .download form button {
+  width: 55px;
+  height: 104%;
+  border: none;
+  background: #1DB954;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
